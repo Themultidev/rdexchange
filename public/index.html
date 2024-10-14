@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="image/RDlg.jpg">
+
+  <title>RD Exchange | Best quick trading platform</title>
+
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+  </style>
+  <link rel="stylesheet" href="rdstyle.css">
+
+</head>
+
+<body>
+  <div id="loader"></div>
+
+  <div class="container">
+
+
+    <nav class="navbar">
+      <div class="logo">
+        <a href="http://wa.me/2349077398821"><img src="image/RDlg.jpg" alt="Logo"></a>
+      </div>
+
+      <button class="hamburger" id="hamburger">
+        Get Started
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#About" style="text-decoration: none; font-weight: bold; color: #292b2c; border-left: light;">Home</a>
+        </li>
+        <li><a href="#Crypto exchange" style="text-decoration: none; font-weight: bold; color: #292b2c;">Crypto Exchange</a></li>
+        <li><a href="#Giftcards & E-transfers" style="text-decoration: none; font-weight: bold; color: #292b2c;">Giftcards & E-transfers</a>
+        </li>
+        <li><a href="#Support" style="text-decoration: none; font-weight: bold; color: #b2b9bd;">Support</a></li>
+      </ul>
+    </nav>
+
+
+    <section id="About" class="about">
+
+      <div>
+        <span class="bounce">Trade on the go with</span><br>
+        <span>RD<span id="animatedText">exchange</span></span>
+
+      </div>
+
+      <div id="animatedText" class="motto">
+        <p>Join us in our global dogged journey building finacial growth Together</p>
+
+      </div>
+
+
+
+      <div class="carousel-container">
+        <button class="scroll-left">&lt;</button>
+        <div class="carousel-images">
+          <div><img src="image/flt/photo_1_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/flt1.jpg" alt=""></div>
+          <div><img src="image/flt/flt2.jpg" alt=""></div>
+          <div><img src="image/flt/flt3.jpg" alt=""></div>
+          <div><img src="image/flt/flt4.jpg" alt=""></div>
+          <div><img src="image/flt/flt5.jpg" alt=""></div>
+          <div><img src="image/flt/flt6.jpg" alt=""></div>
+          <div><img src="image/flt/flt8.jpg" alt=""></div>
+          <div><img src="image/flt/flt10.jpg" alt=""></div>
+          <div><img src="image/flt/photo_10_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_11_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_12_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_13_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_14_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_15_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_16_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_17_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_17_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_19_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_20_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_21_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_22_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_23_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_24_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_25_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_26_2024-09-16_18-48-39.jpg" alt=""></div>
+          <div><img src="image/flt/photo_27_2024-09-16_18-48-39.jpg" alt=""></div>
+        </div>
+        <button class="scroll-right">&gt;</button>
+      </div>
+
+
+
+    </section>
+
+    <section id="Crypto exchange" class="cryptobs">
+      <div class="form-container">
+        <h2>Let's Trade!</h2>
+
+
+        <div id="notification" class="notification hidden">
+          <span id="notification-message"></span>
+          <button id="close-notification" onclick="closeNotification()">OK</button>
+        </div>
+
+
+        <form action="/send_trade" method="POST">
+          <div class="form-group">
+            <label for="buyorsell">Buy/Sell</label>
+            <select id="buyorsell" required name="buyorsell">
+              <option value="" disabled selected>Select Buy or Sell</option>
+              <option value="buy">Buy</option>
+              <option value="sell">Sell</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="amount">Amount to Trade ($10-$max)</label>
+            <input name="amount" type="number" id="amount" min="10" placeholder="Enter amount"  required autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="crypto">Cryptocurrency:</label>
+            <select name="crypto" id="crypto"  required autocomplete="off">
+              <option value="BTC">Bitcoin</option>
+              <option value="ETH">Ethereum</option>
+              <option value="LTC">Litecoin</option>
+              <option value="USDT">USDT (TRC20)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="wallet">Wallet Address</label>
+            <input name="wallet" type="text" id="wallet" placeholder="copy and paste correct wallet address"  required autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input name="email" type="email" id="email" placeholder="Enter your email address"  required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <button type="submit">Trade</button>
+          </div>
+        </form>
+      </div>
+
+
+      <script>
+        function showNotification(message, type = 'success') {
+          const notification = document.getElementById('notification');
+          const notificationMessage = document.getElementById('notification-message');
+
+          notificationMessage.textContent = message;
+
+          if (type === 'error') {
+            notification.classList.add('error');
+          } else {
+            notification.classList.remove('error');
+          }
+
+          notification.classList.remove('hidden');
+
+        }
+
+        function closeNotification() {
+          document.getElementById('notification').classList.add('hidden');
+        }
+      </script>
+
+
+
+      <script>
+        
+          document.querySelector('form').addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          const buyorsell = document.getElementById('buyorsell').value;
+          const amount = document.getElementById('amount').value;
+          const crypto = document.getElementById('crypto').value;
+          const wallet = document.getElementById('wallet').value;
+          const email = document.getElementById('email').value;
+
+          if (buyorsell && amount && crypto && wallet && email) {
+            fetch('/send_trade', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ buyorsell, amount, crypto, wallet, email })
+            })
+              .then(response => response.json())
+              .then(data => {
+                
+                showNotification(data.message, 'success');
+              })
+              .catch(error => {
+               
+                showNotification('Error: ' + error.message, 'error');
+              });
+          } else {
+            showNotification('Please fill in all fields.', 'error');
+          }
+        });
+
+
+      </script>
+
+    </section>
+
+    <section id="Giftcards & E-transfers" class="giftcards">
+
+      <h1>Gift cards and E-transfers services we offer </h1>
+      <p>Our vast global business network and Cloud Offers Solution that allow us quickly match the best offers for
+        various gift cards and E-transfers.</p>
+
+      <div class="grid">
+
+        <div class="category">
+          <h3>Card Nature</h3>
+          <a class="button selected">Physical Card</a>
+          <a class="button selected">White Card</a>
+          <a class="button selected">eCode</a>
+          <a class="button selected">Horizontal Card</a>
+        </div>
+
+
+
+        <div class="category">
+          <h3>Card Type <img src="image/catcard.svg" alt=""></h3>
+          <a href="https://www.apple.com/shop/buy-giftcard/giftcard" class="button">
+            <div>Apple/i-tunes</div>
+            <div><img class="" src="image/apple-pay-svgrepo-com.svg"></div>
+          </a>
+          <a href="https://store.steampowered.com/digitalgiftcards/" class="button ">
+            <div>Steam </div>
+            <div><img class="" src="image/steam-svgrepo-com.svg"></div>
+          </a>
+          <a href="https://www.amazon.com/s?k=amazon+card&adgrpid=82197444435&hvadid=585362804091&hvdev=c&hvlocphy=1010297&hvnetw=g&hvqmt=e&hvrand=17440954034205508666&hvtargid=kwd-271226146&hydadcr=22333_13333064&tag=hydglogoo-20&ref=pd_sl_15f64n3nrp_e"
+            class="button ">
+            <div>Amazon</div>
+            <div><img class="" src="image/amazon-pay-svgrepo-com.svg"></div>
+          </a>
+          <a href="https://www.vanillagift.com/" class="button">
+            <div>Vanilla </div>
+            <div><img class="" src="image/vanilla.png"></div>
+          </a>
+          <a href="https://gold.razer.com/us/en/silver/redeem?categories=gift" class="button">
+            <div>Razer gold </div>
+            <div><img class="" src="image/razer-svgrepo-com.svg"></div>
+          </a>
+          <a href="#" class="button">Other</a>
+          <p style="font-size: small;text-align: center; text-decoration: underline;font-weight: bold;">how to trade</p>
+          <p style="font-size: small;">1: Lets know the card Nature and amount<br>2: We give you the card best
+            price<br>3: If you accept ,you send card credentials for validation<br>4: Provide account details if we
+            confirm card as valid<br>5: Enjoy our sweet rate :)</p>
+          <a href="http://wa.me/2349077398821" class="button"
+            style="background-color: #184e77; color: white; border-radius: 10px;">Sell Card Now</a>
+        </div>
+
+
+        <div class="category">
+          <h3>Fund Transfer <img src="image/transaction-finance-business-svgrepo-com.svg"></h3>
+          <a href="https://www.zellepay.com/" class="button" style="color:purple ;">
+            <div>Zelle </div>
+            <div><img src="image/zelle.png"></div>
+          </a>
+          <a href="https://venmo.com/" class="button" style="color:#00bfff ;">
+            <div>Venmo </div>
+            <div><img src="image/venmo-svgrepo-com.svg"></div>
+          </a>
+          <a href="https://cash.app/" class="button" style="color:rgb(80, 121, 18) ;">
+            <div>Cashapp </div>
+            <div><img src="image/cashapp.png"></div>
+          </a>
+          <a href="https://www.paypal.com/" class="button" style="color:#184e77">
+            <div>Pay<span style="color: #00bfff;">pal</span> </div>
+            <div><img src="image/paypal-svgrepo-com.svg"></div>
+          </a>
+
+          <a href="http://wa.me/2349077398821" class="button"
+            style="background-color: #184e77; color: white; border-radius: 10px;">Perform E-transfer Now</a>
+        </div>
+      </div>
+
+
+    </section>
+
+  <section id="Support" class="support">
+    <img src="image/RDlg.jpg">
+    <div class="footercarrier">
+      <div class="footerone">
+
+        <div>
+          <div><img src="image/icon-location.svg"></div>
+          <div style="margin-top: 10px;">23 Alexandra street,Agip,Port-Harcourt,Nigeria</div>
+        </div>
+
+        <div class="numb">
+          <div><img src="image/icon-phone.svg"></div>
+          <div>
+            <p> +234 907 739 8821</p>
+          </div>
+        </div>
+
+        <div>
+          <div><img src="image/icon-email.svg"></div>
+          <div>
+            <p>example@huddle.com</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="socials">
+        <div><a href="http://wa.me/2349077398821"><img src="image/whatsapp-color-svgrepo-com.svg"></a></div>
+        <div><a href="https://www.instagram.com/rd_group_x?igsh=bmpwZmV2dWc4ZDV6&utm_source=qr"><img
+              src="image/instagram-f-svgrepo-com.svg"></a></div>
+        <div><a href="https://www.facebook.com/profile.php?id=100090687871188&mibextid=LQQJ4d"><img
+              src="image/facebook-f-svgrepo-com.svg"></a></div>
+      </div>
+
+    </div>
+
+    <h5> &copy; Copyright 2024 RDgroups et Multidev All rights reserved.</h5><br>
+    <p> developer email: worlup83@gmail.com</p>
+
+
+
+  </section>
+
+
+
+
+
+  </div>
+  <script>
+
+
+    window.addEventListener('load', function () {
+      document.body.classList.add('loaded');
+
+
+      window.scrollTo(0, 0);
+
+      typeText();
+    });
+
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    const links = document.querySelectorAll('.nav-links li a');
+
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('show');
+      });
+    });
+
+    document.addEventListener('click', function (event) {
+      const isClickInside = hamburger.contains(event.target) || navLinks.contains(event.target);
+
+      if (!isClickInside) {
+        navLinks.classList.remove('show');
+      }
+    });
+
+
+    
+    const carouselImages = document.querySelector('.carousel-images');
+    const scrollLeftBtn = document.querySelector('.scroll-left');
+    const scrollRightBtn = document.querySelector('.scroll-right');
+    const scrollAmount = 30; 
+    let scrollInterval;
+    let startX;
+    let isDragging = false;
+
+    
+    function startScroll(direction) {
+      scrollInterval = setInterval(() => {
+        carouselImages.scrollBy({
+          left: direction * scrollAmount,  
+          behavior: 'smooth'
+        });
+      }, -1);
+    }
+
+    function stopScroll() {
+      clearInterval(scrollInterval);  
+    }
+
+    
+    scrollRightBtn.addEventListener('mousedown', () => startScroll(1));
+    scrollRightBtn.addEventListener('mouseup', stopScroll);
+    scrollRightBtn.addEventListener('mouseleave', stopScroll);
+
+    
+    scrollLeftBtn.addEventListener('mousedown', () => startScroll(-1));
+    scrollLeftBtn.addEventListener('mouseup', stopScroll);
+    scrollLeftBtn.addEventListener('mouseleave', stopScroll);
+
+    
+    carouselImages.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      isDragging = true;  
+    });
+
+    carouselImages.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;  
+      const touchX = e.touches[0].clientX;
+      const swipeDistance = touchX - startX;
+
+     
+      if (Math.abs(swipeDistance) > 50) {
+        if (swipeDistance > 0) {
+          carouselImages.scrollBy({
+            left: -scrollAmount * 5, 
+            behavior: 'smooth'
+          });
+        } else {
+          carouselImages.scrollBy({
+            left: scrollAmount * 5,  
+          });
+        }
+        startX = touchX;  
+      }
+    });
+
+    carouselImages.addEventListener('touchend', () => {
+      isDragging = false;  
+    });
+
+
+
+
+    const text = "exchange";
+    let index = 0;
+    const speed = 150;
+
+    function typeText() {
+      const element = document.getElementById("animatedText");
+      if (index < text.length) {
+        element.textContent = text.substring(0, index + 1);
+        index++;
+        setTimeout(typeText, speed);
+      }
+    }
+
+    window.onload = function () {
+      window.scrollTo(0, 0);
+
+
+      typeText();
+    };
+
+
+  </script>
+
+</body>
