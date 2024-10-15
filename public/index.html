@@ -401,14 +401,28 @@
     }
 
     
+        
     scrollRightBtn.addEventListener('mousedown', () => startScroll(1));
     scrollRightBtn.addEventListener('mouseup', stopScroll);
     scrollRightBtn.addEventListener('mouseleave', stopScroll);
 
-    
     scrollLeftBtn.addEventListener('mousedown', () => startScroll(-1));
     scrollLeftBtn.addEventListener('mouseup', stopScroll);
     scrollLeftBtn.addEventListener('mouseleave', stopScroll);
+
+    
+    scrollRightBtn.addEventListener('touchstart', (e) => {
+        e.preventDefault(); 
+        startScroll(1);
+    });
+    scrollRightBtn.addEventListener('touchend', stopScroll);
+
+    scrollLeftBtn.addEventListener('touchstart', (e) => {
+        e.preventDefault();  
+        startScroll(-1);
+    });
+    scrollLeftBtn.addEventListener('touchend', stopScroll);
+
 
     
     carouselImages.addEventListener('touchstart', (e) => {
